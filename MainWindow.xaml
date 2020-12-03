@@ -1,0 +1,70 @@
+﻿<Window x:Class="DuplicateTheApps.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DuplicateTheApps"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,-3">
+        <Rectangle HorizontalAlignment="Left" Height="350" Margin="242,29,0,0" Stroke="Black" VerticalAlignment="Top" Width="340"/>
+        <Rectangle HorizontalAlignment="Left" Height="163" Margin="20,29,0,0" Stroke="Black" VerticalAlignment="Top" Width="192"/>
+        <Label Content="Diantar Ke-" HorizontalAlignment="Left" Margin="24,42,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="169" Margin="588,34,0,0" Stroke="Black" VerticalAlignment="Top" Width="192"/>
+        <Rectangle HorizontalAlignment="Left" Height="164" Margin="588,236,0,0" Stroke="Black" VerticalAlignment="Top" Width="193"/>
+        <Label Content="Item yang mo dipesan" HorizontalAlignment="Left" Margin="261,34,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Metode Pembayaran" HorizontalAlignment="Left" Margin="587,34,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="596,240,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="Fajar THEDAY" HorizontalAlignment="Left" Margin="26,76,0,0" VerticalAlignment="Top"/>
+        <Label Content="Kalimantan" HorizontalAlignment="Left" Margin="26,102,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GantiAlamat" Content="Ganti Alamatmu" HorizontalAlignment="Left" Margin="75,155,0,0" VerticalAlignment="Top" Width="102" Click="OnButtonGantiAlamatClicked" Height="23"/>
+        <ListBox x:Name ="Dibeli" HorizontalAlignment="Left" Height="158" Margin="261,69,0,0" VerticalAlignment="Top" Width="297" MouseDoubleClick="OnMouseDoubleclick2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="280" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding nama}" TextAlignment="Left" />
+                        <TextBlock Grid.Column="0" Text= "{Binding harga}"  TextAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Label x:Name="Total" Content="0" HorizontalAlignment="Left" Margin="621,289,0,0" VerticalAlignment="Top" FontSize="35" FontWeight="Bold"/>
+        <Label x:Name="MetodeBayar" Content="Oiyoo" HorizontalAlignment="Left" Margin="601,85,0,0" VerticalAlignment="Top" FontSize="12"/>
+        <Label x:Name="saldo" Content="250000" HorizontalAlignment="Left" Margin="602,111,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GantiMetodePembayaran" Content="Ganti" HorizontalAlignment="Left" Margin="703,98,0,0" VerticalAlignment="Top" Width="60" Click="OnButtonGantiMetodePembayranClicked"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="596,142,0,0" VerticalAlignment="Top"/>
+        <Label Content="kalimantan" HorizontalAlignment="Left" Margin="604,165,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GantiPromo" Content="Ganti" HorizontalAlignment="Left" Margin="703,153,0,0" VerticalAlignment="Top" Width="60" Click="OnButtonGantiPromoCLicked"/>
+        <Separator HorizontalAlignment="Left" Height="22" Margin="261,258,0,0" VerticalAlignment="Top" Width="293" Background="#FFF0F0F0"/>
+        <Label Content="Hargo Total" HorizontalAlignment="Left" Margin="261,277,0,0" VerticalAlignment="Top"/>
+        <Label Content="Biaya Pengiriman" HorizontalAlignment="Left" Margin="261,303,0,0" VerticalAlignment="Top"/>
+        <Label Content="Discount" HorizontalAlignment="Left" Margin="261,329,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="subtotal" Content="0" HorizontalAlignment="Left" Margin="509,281,0,0" VerticalAlignment="Top"/>
+        <Label Content="10000" HorizontalAlignment="Left" Margin="508,303,0,0" VerticalAlignment="Top"/>
+        <Label Content="-6000" HorizontalAlignment="Left" Margin="509,329,0,0" VerticalAlignment="Top"/>
+        <ListBox x:Name ="Dijual" HorizontalAlignment="Left" Height="153" Margin="32,247,0,0" VerticalAlignment="Top" Width="168" MouseDoubleClick="OnMouseDoubleClick">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="{Binding nama}" TextAlignment="Left" />
+                        <TextBlock Grid.Column="0" Text= "{Binding harga}"  TextAlignment="Right"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label Content="Menunya ini" HorizontalAlignment="Left" Margin="36,214,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="185" Margin="24,214,0,0" VerticalAlignment="Top" Width="184"/>
+
+
+
+
+
+    </Grid>
+</Window>
